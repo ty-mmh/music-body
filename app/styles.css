@@ -1,0 +1,120 @@
+/* app/styles.css */
+
+:root {
+  color-scheme: dark;
+  --bg: #0f1115;
+  --panel: #171a21;
+  --text: #e8ecf1;
+  --muted: #9aa4b2;
+  --accent: #d7e3ff;
+  --border: #2a303b;
+  --button: #202632;
+  --button-hover: #2a3240;
+  --button-disabled: #1a1f28;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    Inter,
+    "Noto Sans JP",
+    "Hiragino Sans",
+    "Yu Gothic UI",
+    sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  width: min(680px, calc(100% - 32px));
+  margin: 64px auto;
+  padding: 32px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+header {
+  margin-bottom: 24px;
+}
+
+header p {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+section {
+  margin-top: 24px;
+}
+
+section p {
+  margin: 0 0 8px;
+  color: var(--muted);
+}
+
+span {
+  color: var(--accent);
+}
+
+button {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--button);
+  color: var(--text);
+  padding: 10px 16px;
+  margin-right: 12px;
+  border-radius: 10px;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    background-color 0.18s ease,
+    transform 0.18s ease,
+    opacity 0.18s ease;
+}
+
+button:hover {
+  background: var(--button-hover);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  background: var(--button-disabled);
+  color: var(--muted);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+@media (max-width: 640px) {
+  main {
+    margin: 24px auto;
+    padding: 24px;
+  }
+
+  button {
+    width: 100%;
+    margin: 0 0 12px;
+  }
+}
