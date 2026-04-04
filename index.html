@@ -1,0 +1,30 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>music-body</title>
+    <link rel="stylesheet" href="./app/styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p>music-body</p>
+        <h1 id="piece-title">Loading...</h1>
+      </header>
+
+      <section aria-label="piece information">
+        <p>BPM: <span id="piece-bpm">--</span></p>
+        <p>Status: <span id="player-status">booting...</span></p>
+      </section>
+
+      <section aria-label="player controls">
+        <button id="play-button" type="button">Play</button>
+        <button id="stop-button" type="button">Stop</button>
+      </section>
+    </main>
+
+    <script type="module" src="./app/main.ts"></script>
+  </body>
+</html>
