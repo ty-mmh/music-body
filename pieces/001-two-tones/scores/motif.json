@@ -1,0 +1,38 @@
+{
+  "id": "001-two-tones-main-motif",
+  "pieceId": "001-two-tones",
+  "title": "Two-tone motif",
+  "description": "A minimal motif built from two tones with a slight displacement in the second return.",
+  "pitches": ["C4", "D4"],
+  "durations": ["8n", "4n"],
+  "relation": "ascending major second",
+  "intervals": [0, 2],
+  "rests": ["2n"],
+  "pattern": [
+    {
+      "step": 1,
+      "note": "C4",
+      "dur": "8n"
+    },
+    {
+      "step": 2,
+      "note": "D4",
+      "dur": "4n"
+    },
+    {
+      "step": 3,
+      "rest": "2n"
+    }
+  ],
+  "variation": {
+    "type": "timing-displacement",
+    "target": "second ending note",
+    "description": "The ending note in the second phrase is placed slightly later."
+  },
+  "concept": [
+    "built from only two tones",
+    "does not resolve",
+    "repeats with a slight temporal shift"
+  ],
+  "tags": ["minimal", "two-tones", "repetition", "displacement"]
+}
