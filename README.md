@@ -154,7 +154,7 @@ Notation score を見て Motif score を修正することもある。
 │  │  ├─ scores/
 │  │  │  ├─ concept.md
 │  │  │  ├─ motif.json
-│  │  │  ├─ playback.json
+│  │  │  ├─ playback.ts
 │  │  │  └─ notation.abc
 │  │  ├─ modules/
 │  │  └─ assets/
@@ -189,6 +189,50 @@ Notation score を見て Motif score を修正することもある。
 ### `experiments/`
 試作や未整理の実験を置く場所です。  
 ここでの試みは、後に作品や基盤へ接続されるかもしれません。
+
+## Environment
+
+現時点では、このリポジトリはローカル環境での制作と再生を前提としている。
+
+主な動作環境は次の通り。
+
+- macOS
+- Bun
+- Web Audio API を利用できるモダンブラウザ
+
+この段階で優先されているのは、  
+小作品を最小の構造のままブラウザ上で聴けることです。
+
+## How to run locally
+
+依存関係をインストールする。
+
+```bash
+bun install
+```
+
+ローカルで起動する。
+
+```bash
+bun run dev
+```
+
+ブラウザでローカルページを開き、`Play` を押すと現在の piece を再生できる。
+
+## Current status
+
+現時点では、最小構成として次のことができる。
+
+- 小作品を読み込む
+- ブラウザ上で再生 / 停止する
+- 音楽を複数の score layer として扱う
+- `playback.ts` から `notation.abc` を生成する
+
+ABC 記譜の生成は次のコマンドで行う。
+
+```bash
+bun run generate:abc
+```
 
 ## How to read this repository
 
